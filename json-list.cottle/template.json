@@ -27,7 +27,10 @@
         ]
     },
     "Indirections": [{{for index, indir in Indirections:
-        { "Name": "{{indir.Name}}", "{{Input}}": "{{indir.Input}}", "{{Action}}": "{{indir.Action}}", "{{Output}}": "{{indir.Output}}" }{{if index < Indirections - 1:,}}}}
+        { "Input": "{{indir.Input}}", "Action": "{{indir.Action}}", "Output": "{{indir.Output}}" }{{if index < Indirections - 1:,}}}}
+    ],
+    "Equations": [{{for index, equ in Equations:
+        { "Name": "{{equ.Name}}", "AssignTo": "{{equ.AssignTo}}", "Operation": "{{equ.Operation}}" }{{if index < Equations - 1:,}}}}
     ],
     "Machines": [{{for index, mach in Machines:
         {
